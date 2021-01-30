@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavBar" customModule="HomePageInstagram" customModuleProvider="target">
+            <connections>
+                <outlet property="heartButton" destination="cWN-dh-JO8" id="YO8-UC-gQL"/>
+                <outlet property="logoImageView" destination="dxn-nh-Yux" id="23W-uk-v9z"/>
+                <outlet property="navBarView" destination="iN0-l3-epB" id="Fvz-7T-TAO"/>
+                <outlet property="sendButton" destination="4Kk-fF-dGR" id="W8L-7i-fct"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjq-XZ-Lq9">
+                    <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dxn-nh-Yux">
+                            <rect key="frame" x="12" y="16" width="121" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="Fc6-iH-bGo"/>
+                                <constraint firstAttribute="width" constant="121" id="q1H-Qc-rIV"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWN-dh-JO8">
+                            <rect key="frame" x="311" y="31.5" width="36" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="LUs-Go-phB"/>
+                                <constraint firstAttribute="width" constant="36" id="YBW-28-gm5"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="heart"/>
+                            <state key="selected" image="heart_fill"/>
+                            <connections>
+                                <action selector="likeButtonPressedWithSender:" destination="-1" eventType="touchUpInside" id="Iiz-YN-WF1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kk-fF-dGR">
+                            <rect key="frame" x="367" y="33" width="35" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="JaL-yA-bEn"/>
+                                <constraint firstAttribute="height" constant="30" id="T5F-ia-D6k"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="send"/>
+                            <connections>
+                                <action selector="directButtonPressedWithSender:" destination="-1" eventType="touchUpInside" id="YR6-of-3xd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="4Kk-fF-dGR" secondAttribute="trailing" constant="12" id="08f-PJ-aZv"/>
+                        <constraint firstItem="dxn-nh-Yux" firstAttribute="leading" secondItem="xjq-XZ-Lq9" secondAttribute="leading" constant="12" id="8A7-wg-f8c"/>
+                        <constraint firstItem="4Kk-fF-dGR" firstAttribute="centerY" secondItem="xjq-XZ-Lq9" secondAttribute="centerY" id="HYy-VT-Jvb"/>
+                        <constraint firstItem="dxn-nh-Yux" firstAttribute="centerY" secondItem="xjq-XZ-Lq9" secondAttribute="centerY" id="TyQ-0f-0Jf"/>
+                        <constraint firstItem="cWN-dh-JO8" firstAttribute="centerY" secondItem="xjq-XZ-Lq9" secondAttribute="centerY" id="mvJ-oH-fmf"/>
+                        <constraint firstItem="4Kk-fF-dGR" firstAttribute="leading" secondItem="cWN-dh-JO8" secondAttribute="trailing" constant="20" id="sDO-Nv-c2o"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemPurpleColor"/>
+            <constraints>
+                <constraint firstItem="xjq-XZ-Lq9" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="bPK-2a-t5Q"/>
+                <constraint firstItem="xjq-XZ-Lq9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qdB-7L-8OZ"/>
+                <constraint firstItem="xjq-XZ-Lq9" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="uVK-fz-H5d"/>
+                <constraint firstItem="xjq-XZ-Lq9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="w5d-x4-Ja4"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="79.710144927536234" y="89.732142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="heart" width="512" height="512"/>
+        <image name="heart_fill" width="512" height="512"/>
+        <image name="logo" width="3840" height="1160"/>
+        <image name="send" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
